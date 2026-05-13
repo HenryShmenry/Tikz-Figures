@@ -1,0 +1,64 @@
+\begin{tikzpicture}[scale = 1]
+        \draw[-, color = white, fill = orange!30, opacity = 0.5, rounded corners=10pt] (-1,-5) rectangle (1,3);
+        \draw[-, color = white, fill = cyan!30, opacity = 0.5, rounded corners=10pt] (2, -5) rectangle (10,3);
+        \draw[-, color = white, fill = red!30, opacity = 0.5, rounded corners=10pt] (11, -5) rectangle (13,3);
+
+        \draw[-, fill = red!10] (0,1) circle  (0.5) node[]{$x_0$};
+        \draw[dotted] (0,0.5) -- (0,-2.5);
+        \draw[-, fill = red!10] (0,-3) circle  (0.5) node[]{$x_i$};
+
+        \draw[->] (0.5,1) -- (3,2);
+        \draw[->] (0.5,1) -- (3,0);
+        \draw[->] (0.5,1) -- (3,-2);
+        \draw[->] (0.5,1) -- (3,-4);
+        \draw[->] (0.5,-3) -- (3,2);
+        \draw[->] (0.5,-3) -- (3,0);
+        \draw[->] (0.5,-3) -- (3,-2);
+        \draw[->] (0.5,-3) -- (3,-4);
+
+        \draw[-, fill = blue!10] (3.5,2) circle (0.5) node[]{$w_{0,0}$};
+        \draw[-, fill = blue!10] (3.5,0) circle (0.5) node[]{$w_{0,1}$};
+        \draw[dotted] (3.5,-0.5) -- (3.5,-1.5);
+        \draw[-, fill = blue!10] (3.5,-2) circle (0.5) node[scale = 0.75]{$w_{0,p-1}$};
+        \draw[-, fill = blue!10] (3.5,-4) circle (0.5) node[]{$w_{0,p}$};
+
+        \draw[->, dashed] (4,2) -- (8,2);
+        \draw[->, dashed] (4,2) -- (8,0);
+        \draw[->, dashed] (4,2) -- (8,-2);
+        \draw[->, dashed] (4,2) -- (8,-4);
+        \draw[->, dashed] (4,0) -- (8,2);
+        \draw[->, dashed] (4,0) -- (8,0);
+        \draw[->, dashed] (4,0) -- (8,-2);
+        \draw[->, dashed] (4,0) -- (8,-4);
+        \draw[->, dashed] (4,-2) -- (8,2);
+        \draw[->, dashed] (4,-2) -- (8,0);
+        \draw[->, dashed] (4,-2) -- (8,-2);
+        \draw[->, dashed] (4,-2) -- (8,-4);
+        \draw[->, dashed] (4,-4) -- (8,2);
+        \draw[->, dashed] (4,-4) -- (8,0);
+        \draw[->, dashed] (4,-4) -- (8,-2);
+        \draw[->, dashed] (4,-4) -- (8,-4);
+
+        \draw[-, fill = blue!10] (8.5,2) circle (0.5) node[]{$w_{q,0}$};
+        \draw[-, fill = blue!10] (8.5,0) circle (0.5) node[]{$w_{q,1}$};
+        \draw[dotted] (8.5,-0.5) -- (8.5,-1.5);
+        \draw[-, fill = blue!10] (8.5,-2) circle (0.5) node[scale = 0.75]{$w_{q,p-1}$};
+        \draw[-, fill = blue!10] (8.5,-4) circle (0.5) node[]{$w_{q,p}$};
+
+        \draw[->] (9,2) -- (11.5,0);
+        \draw[->] (9,0) -- (11.5,0);
+        \draw[->] (9,-2) -- (11.5,0);
+        \draw[->] (9,-4) -- (11.5,0);
+        \draw[->] (9,2) -- (11.5,-2);
+        \draw[->] (9,0) -- (11.5,-2);
+        \draw[->] (9,-2) -- (11.5,-2);
+        \draw[->] (9,-4) -- (11.5,-2);
+
+        \draw[-, fill = green!10] (12,0) circle (0.5) node[]{$z_0$};
+        \draw[dotted] (12,-0.5) -- (12,-1.5);
+        \draw[-, fill = green!10] (12,-2) circle (0.5) node[]{$z_j$};
+
+        \node[above] at (0,-5){Inputs};
+        \node[above] at (6,-5.1){Layers of Hidden Nodes};
+        \node[above] at (12,-5){Outputs};
+    \end{tikzpicture}
