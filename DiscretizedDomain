@@ -1,0 +1,87 @@
+\begin{tikzpicture}[xscale = 2]
+        % The grid
+            \draw[gray!60] (0,0) grid (6,8);
+            \draw[] (0,0) rectangle (6,8);
+
+        % Axis Labels
+            \node[above] at (3,8){Time $t$};
+            \node[above, rotate = -90] at (6,4){Space* $r$};
+
+        % Mini Axis Labels
+            \draw[-] (1,0) -- (1,-0.2) node[below]{0};
+            \draw[-] (2,0) -- (2,-0.2) node[below]{$\Delta t$};
+            \draw[-] (3,0) -- (3,-0.2) node[below]{$2\Delta t$};
+            \draw[-] (5,0) -- (5,-0.2) node[below]{$T$};
+
+            \draw[-] (0,1) -- (-0.2,1) node[left]{$a$};
+            \draw[-] (0,2) -- (-0.2,2) node[left]{$a+\Delta r$};
+            \draw[-] (0,3) -- (-0.2,3) node[left]{$a+2\Delta r$};
+            \draw[-] (0,6) -- (-0.2,6) node[left]{$b-\Delta r$};
+            \draw[-] (0,7) -- (-0.2,7) node[left]{$b$};
+
+        % Coordinate Labels
+            \node[below, fill = white, scale = 0.9] at (1,1-0.1){$F_{0,0}=p_0=q_0$};
+            \node[below, fill = white, scale = 0.9] at (2,1-0.1){$F_{1,0}=q_1$};
+            \node[below, fill = white, scale = 0.9] at (3,1-0.1){$F_{2,0}=q_2$};
+            \node[below, fill = white, scale = 0.9] at (5,1-0.1){$F_{M,0}=q_M$};
+
+            \node[below, fill = white, scale = 0.9] at (1,2-0.1){$F_{0,1}=p_1$};
+            \node[below, fill = white, scale = 0.9] at (2,2-0.1){$F_{1,1}$};
+            \node[below, fill = white, scale = 0.9] at (3,2-0.1){$F_{2,1}$};
+            \node[below, fill = white, scale = 0.9] at (5,2-0.1){$F_{M,1}$};
+
+            \node[below, fill = white, scale = 0.9] at (1,3-0.1){$F_{0,2}=p_2$};
+            \node[below, fill = white, scale = 0.9] at (2,3-0.1){$F_{1,2}$};
+            \node[below, fill = white, scale = 0.9] at (3,3-0.1){$F_{2,2}$};
+            \node[below, fill = white, scale = 0.9] at (5,3-0.1){$F_{M,2}$};
+
+            \node[below, fill = white, scale = 0.9] at (1,6-0.1){$F_{0,N-1}=p_{N-1}$};
+            \node[below, fill = white, scale = 0.9] at (2,6-0.1){$F_{1,N-1}$};
+            \node[below, fill = white, scale = 0.9] at (3,6-0.1){$F_{2,N-1}$};
+            \node[below, fill = white, scale = 0.9] at (5,6-0.1){$F_{M,N-1}$};
+
+            \node[below, fill = white, scale = 0.9] at (1,7-0.1){$F_{0,N}=p_N=l_0$};
+            \node[below, fill = white, scale = 0.9] at (2,7-0.1){$F_{1,N}=l_1$};
+            \node[below, fill = white, scale = 0.9] at (3,7-0.1){$F_{2,N}=l_2$};
+            \node[below, fill = white, scale = 0.9] at (5,7-0.1){$F_{M,N}=l_M$};
+
+        % Coordinate Points
+            \draw[thick, red, fill = red!20, xscale = 0.5] (2,1) circle (3pt);
+            \draw[thick, red, fill = red!20, xscale = 0.5] (4,1) circle (3pt);
+            \draw[thick, red, fill = red!20, xscale = 0.5] (6,1) circle (3pt);
+            \draw[thick, red, fill = red!20, xscale = 0.5] (10,1) circle (3pt);
+
+            \draw[thick, orange, fill = orange!20, xscale = 0.5] (2,2) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (4,2) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (6,2) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (10,2) circle (3pt);
+
+            \draw[thick, orange, fill = orange!20, xscale = 0.5] (2,3) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (4,3) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (6,3) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (10,3) circle (3pt);
+
+            \draw[thick, orange, fill = orange!20, xscale = 0.5] (2,6) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (4,6) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (6,6) circle (3pt);
+            \draw[thick, blue, fill = blue!20, xscale = 0.5] (10,6) circle (3pt);
+
+            \draw[thick, green, fill = green!20, xscale = 0.5] (2,7) circle (3pt);
+            \draw[thick, green, fill = green!20, xscale = 0.5] (4,7) circle (3pt);
+            \draw[thick, green, fill = green!20, xscale = 0.5] (6,7) circle (3pt);
+            \draw[thick, green, fill = green!20, xscale = 0.5] (10,7) circle (3pt);
+
+        % Dots Coordinates
+            \node[fill = white] at (4,1){$\cdots$};
+            \node[fill = white] at (4,2){$\cdots$};
+            \node[fill = white] at (4,3){$\cdots$};
+            \node[fill = white] at (4,6){$\cdots$};
+            \node[fill = white] at (4,7){$\cdots$};
+
+            \node[fill = white] at (1,4.5){$\vdots$};
+            \node[fill = white] at (2,4.5){$\vdots$};
+            \node[fill = white] at (3,4.5){$\vdots$};
+            \node[fill = white] at (5,4.5){$\vdots$};
+
+            \node[fill = white] at (4,4.5){$\iddots$};
+        \end{tikzpicture}
